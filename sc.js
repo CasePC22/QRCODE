@@ -26,7 +26,26 @@ Instascan.Camera.getCameras().then(function (cameras) {
                 } else {
                     alert('No Back camera found!');
                 }
+            } else if ($(this).val() == 3) {
+                if (cameras[2] != "") {
+                    scanner.start(cameras[2]);
+                } else {
+                    alert('No Back camera found!');
+                }
+            } else if ($(this).val() == 4) {
+                if (cameras[3] != "") {
+                    scanner.start(cameras[3]);
+                } else {
+                    alert('No Back camera found!');
+                }
+            } else if ($(this).val() == 5) {
+                if (cameras[4] != "") {
+                    scanner.start(cameras[4]);
+                } else {
+                    alert('No Back camera found!');
+                }
             }
+        
         });
     } else {
         console.error('No cameras found.');
