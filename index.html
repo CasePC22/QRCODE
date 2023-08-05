@@ -32,15 +32,17 @@ scanner.addListener('scan', function (content) {
     labelElement.textContent = teste;
 });
 Instascan.Camera.getCameras().then(function (cameras) {
-   console.log(cameras.length);
-   alert(cameras.length);
-  
-	/* if (cameras.length > 0) {
+   /* console.log(cameras.length);
+   alert(cameras.length); */
+   scanner.start(cameras[1]);
+
+  /* 
+	 if (cameras.length > 0) {
         scanner.start(cameras[0]);
     } 
 }).catch(function (e) {
     console.error(e);
-    alert(e);*/
+    alert(e); */
 });
 
 </script>
