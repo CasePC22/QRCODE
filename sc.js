@@ -9,6 +9,8 @@ scanner.addListener('scan', function (content) {
     //window.location.href=content;
 });
 Instascan.Camera.getCameras().then(function (cameras) {
+    alert(cameras.length);
+
     if (cameras.length > 0) {
         scanner.start(cameras[0]);
          $('[name="options"]').on('change', function () {
